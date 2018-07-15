@@ -5,7 +5,7 @@ window.addEventListener("load", function() {
 
         let html = document.createElement("div"),
         content = "<div class=\"tw-inline-flex\">" 
-                + "<a href=\"\" class=\"tw-interactive tw-button\" id=\"download-btn\" download=\"clip.mp4\"><span class=\"tw-button__text\" data-a-target=\"tw-button-text\">Download</span></a>"
+                + "<a href=\"\" class=\"tw-interactive tw-button\" id=\"download-btn\" download=\"clip.mp4\"><span class=\"tw-button__text\" data-a-target=\"tw-button-text\">Download Clip</span></a>"
                 + "</div>"        
 
         let player = document.getElementsByClassName("player-video"),
