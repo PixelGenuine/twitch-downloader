@@ -1,8 +1,6 @@
 // run the script after the page has fully loaded
 // to avoid potential errors in the execution
 window.addEventListener("load", function() {
-        const MIME_TYPE = "arraybuffer"
-
         let html = document.createElement("div"),
         content = "<div class=\"tw-inline-flex\">" 
                 + "<a href=\"\" class=\"tw-interactive tw-button\" id=\"download-btn\" download=\"clip.mp4\"><span class=\"tw-button__text\" data-a-target=\"tw-button-text\">Download Clip</span></a>"
