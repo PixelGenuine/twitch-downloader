@@ -1,6 +1,6 @@
 {
     "name": "Twitch Downloader",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Download Twitch clips with one click.",
     "background": { 
         "scripts": ["background.js"],
@@ -14,6 +14,7 @@
     "permissions": ["tabs", "*://clips.twitch.tv/*"],
     "content_scripts": [
         {
+        "run_at": "document_end",
         "matches": ["*://clips.twitch.tv/*"],
         "js": ["downloader.js"]
         }
