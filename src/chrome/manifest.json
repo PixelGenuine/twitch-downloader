@@ -16,7 +16,7 @@
         {
         "run_at": "document_end",
         "matches": ["*://clips.twitch.tv/*"],
-        "js": ["downloader.js"]
+        "js": ["jquery.js", "downloader.js"]
         }
     ],
     "manifest_version": 2
