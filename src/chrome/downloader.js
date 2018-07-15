@@ -1,7 +1,7 @@
 // run the script after the page has fully loaded
 // to avoid potential errors in the execution
 window.addEventListener("load", function() {
-        const MIME_TYPE = "video/mp4"
+        const MIME_TYPE = "arraybuffer"
 
         let html = document.createElement("div"),
         content = "<div class=\"tw-inline-flex\">" 
