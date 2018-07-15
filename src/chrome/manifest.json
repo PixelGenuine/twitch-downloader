@@ -1,7 +1,12 @@
 {
     "name": "Twitch Downloader",
+<<<<<<< HEAD
     "version": "1.4",
     "description": "Download Twitch clips in one click.",
+=======
+    "version": "1.2",
+    "description": "Download Twitch clips with one click.",
+>>>>>>> 73e34c235178d29b5c5d1f9bbccef4a85286a867
     "background": { 
         "scripts": ["background.js"],
         "persistent": false
@@ -11,10 +16,17 @@
         "64": "assets/img/logo-64.png",
         "128": "assets/img/logo-128.png"
     },
+<<<<<<< HEAD
     "permissions": ["downloads", "*://clips.twitch.tv/*"],
     "content_scripts": [
         {
         "run_at": "document_idle",
+=======
+    "permissions": ["tabs", "*://clips.twitch.tv/*"],
+    "content_scripts": [
+        {
+        "run_at": "document_end",
+>>>>>>> 73e34c235178d29b5c5d1f9bbccef4a85286a867
         "matches": ["*://clips.twitch.tv/*"],
         "js": ["jquery.js", "downloader.js"]
         }

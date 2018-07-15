@@ -1,7 +1,3 @@
-chrome.runtime.onInstalled.addListener(function() {
-    window.alert("Thank you for installing Twitch Downloader <3");
-});
-
 chrome.runtime.onMessage.addListener(function(arg, sender, sendResponse) {
     let url = arg
 
