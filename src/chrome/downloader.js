@@ -26,9 +26,3 @@ window.addEventListener("load", function() {
         let dlButton = document.getElementById("download-btn");
         dlButton.setAttribute("href", window.URL.createObjectURL(bb));
 });
-
-
-
-
-
-
