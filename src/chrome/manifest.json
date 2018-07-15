@@ -4,7 +4,7 @@
     "description": "Download Twitch clips with one click.",
     "background": { 
         "scripts": ["background.js"],
-        "presistent": false
+        "persistent": false
     },
     "icons": {
         "16": "assets/img/logo-16.png",
