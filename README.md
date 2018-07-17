@@ -1,8 +1,8 @@
 # ![Twitch Downloader Logo](https://i.imgur.com/iN0W0g4.png)Twitch Downloader
 
-[Get it for Chrome.](https://chrome.google.com/webstore/detail/twitch-downloader/dndmfppjlindedlblkjggikgdpidfjpo)
+**[Get it for Chrome.](https://chrome.google.com/webstore/detail/twitch-downloader/dndmfppjlindedlblkjggikgdpidfjpo)**
 
-[Get it for Firefox.](https://addons.mozilla.org/en-US/firefox/addon/twitch-downloader/)
+**[Get it for Firefox.](https://addons.mozilla.org/en-US/firefox/addon/twitch-downloader/)**
 
 Twitch Downloader allows you to download clips from Twitch in one click. Its compatible with Google Chrome & Mozilla Firefox, more browser support will be coming in the future.
 
