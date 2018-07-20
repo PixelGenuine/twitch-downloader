@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p class="hidden" id="error-dialog" style="color: red; font-weight: bold;"></p>
+            <p class="hidden" id="success-dialog" style="color: green; font-weight: bold;"></p>
+        </div>
+        <label class="bold" for="custom-filename">Custom Filename:</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="custom-filename" placeholder="Name">
+            <div class="input-group-append">
+              <span class="input-group-text">.mp4</span>
+            </div>
+        </div>
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                    <input type="checkbox" class="custom-control-input pointer" id="current-date">
+                    <label class="custom-control-label pointer" for="current-date">Include current date</label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <label class="bold" for="">Miscellaneous:</label>
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                    <input type="checkbox" class="custom-control-input pointer" id="show-saveto">
+                    <label class="custom-control-label pointer" for="show-saveto">Show "Save To" dialog</label>
+                </div>
+            </div>
+        </div>
+        <hr style="margin-bottom: .5rem;">
+        <div class="float-right">
+            <button class="btn btn-primary bold" type="button" id="save" style="margin-bottom: .5rem;"><i class="fas fa-save"></i> Save Settings</button>
+        </div>
+    </div>
+    <script src="../settings.js"></script>
+    <script src="../libs/font-awesome.js"></script>
+    <script src="../libs/jquery.js"></script>
+</body>
+</html>
