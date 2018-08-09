@@ -1,0 +1,38 @@
+{
+  "name": "twitch-downloader",
+  "version": "1.7.0",
+  "description": "Twitch Downloader allows you to download clips from Twitch with one click",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haljadooa/twitch-downloader.git"
+  },
+  "keywords": [
+    "twitch",
+    "clips",
+    "downloader"
+  ],
+  "author": "Hassan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/haljadooa/twitch-downloader/issues"
+  },
+  "homepage": "https://github.com/haljadooa/twitch-downloader#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "bable-loader": "0.0.1-security",
+    "copy-webpack-plugin": "^4.5.2",
+    "env": "0.0.2",
+    "file-loader": "^1.1.11",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "write-file-webpack-plugin": "^4.3.2"
+  }
+}
