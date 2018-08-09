@@ -4,7 +4,7 @@
   "description": "Twitch Downloader allows you to download clips from Twitch with one click",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
