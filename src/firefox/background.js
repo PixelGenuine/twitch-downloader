@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const errors = require("./utils/errors")
 
 // will execute when the extension is first installed
@@ -22,3 +23,15 @@ browser.runtime.onMessage.addListener(function (args) {
         //errors.report(e.message)
     }
 })
+=======
+browser.runtime.onMessage.addListener(function(arg, sender, sendResponse) {
+    let url = arg
+
+    browser.downloads.download({
+        "url": arg,
+        "saveAs": false,
+        "filename": "clip.mp4"
+    }); 
+});
+
+>>>>>>> f9e01a340bf354e9a0ae2c0f190e8ab5faddba07

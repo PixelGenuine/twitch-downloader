@@ -1,5 +1,6 @@
 {
     "name": "Twitch Downloader",
+<<<<<<< HEAD
     "version": "1.7",
     "description": "Twitch Downloader allows you to download clips from Twitch with one click",
     "background": { 
@@ -27,5 +28,26 @@
         "default_title": "Twitch Downloader",
         "default_popup": "index.html"
     },
+=======
+    "version": "1.5",
+    "description": "Download Twitch clips with one click.",
+
+    "background": { 
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "assets/img/logo-16.png",
+        "64": "assets/img/logo-64.png",
+        "128": "assets/img/logo-128.png"
+    },
+    "permissions": ["downloads", "*://clips.twitch.tv/*"],
+    "content_scripts": [
+        {
+        "matches": ["*://clips.twitch.tv/*"],
+        "js": ["downloader.js"]
+        }
+    ],
+
+>>>>>>> f9e01a340bf354e9a0ae2c0f190e8ab5faddba07
     "manifest_version": 2
 }
