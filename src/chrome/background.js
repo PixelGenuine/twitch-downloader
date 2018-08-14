@@ -1,4 +1,3 @@
-
 const errors = require("./utils/errors")
 
 // will execute when the extension is first installed
