@@ -3,7 +3,6 @@ import logo64 from "./assets/img/logo-64.png"
 import logo128 from "./assets/img/logo-128.png"
 
 import $ from "jquery"
-
 const clips = require("./utils/clips")
 
 // runs after the page fully loads

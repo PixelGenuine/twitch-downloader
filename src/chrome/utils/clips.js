@@ -2,6 +2,7 @@ const errors = require("./errors")
 
 // helper functions
 let methods = {
+    // get the unique id of a clip
     getSlug: function(data) {
         let slug
 
@@ -21,17 +22,17 @@ let methods = {
             slug = "clip"
 
             // report the error
-            errors.report(e.message)
+            //errors.report(e.message)
         }
-
-        console.log(slug)
+        
         // just in case slug retrieval fails and no error is thrown
-        if (slug == undefined || slug == null || slug == "") {
+        if (slug == undefined || slug == "") {
             slug = "clip"
         }
-
+        
         return slug
     }
 }
 
+// export the helper functions
 module.exports = methods

@@ -17,9 +17,9 @@ chrome.runtime.onMessage.addListener(function(args) {
             "saveAs": false
         });
     } catch (e) {
-        // report the error to the Twitter error tracking bot @ErrorReportBot
-        errors.report(e.message)
+        // report the error to the Twitter error tracking bot @ErrorsTracker
+        //errors.report(e.message)
 
-        window.alert("Download failed. Please reload and try again. Error has been reported");
+        window.alert("Download failed. Please reload and try again.");
     }
 })
