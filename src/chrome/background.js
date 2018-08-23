@@ -1,4 +1,4 @@
-const errors = require("./utils/errors")
+const utils = require("./utils/utils")
 
 // will execute when the extension is first installed
 chrome.runtime.onInstalled.addListener(function() {
@@ -17,9 +17,27 @@ chrome.runtime.onMessage.addListener(function(args) {
             "saveAs": false
         });
     } catch (e) {
-        // report the error to the Twitter error tracking bot @ErrorsTracker
-        //errors.report(e.message)
+        // notify the user when clip download fails
+        utils.notify({
+            id: "downloadError", 
+            type: "basic", 
+            title: "Download failed", 
+            message: "Download failed. Please reload and try again.",
+            context: "Twitch Downloader"
+        })
+    }
+})
 
-        window.alert("Download failed. Please reload and try again.");
+// listen when the buttons on notification is clicked
+chrome.notifications.onButtonClicked.addListener(function (id, btnIndex) {
+    // check which button was clicked
+    if (id === "downloadError" || btnIndex === 0) {
+        /**
+         * No need to specifiy a tab id
+         * because it will default to the current active tab
+         */
+        chrome.tabs.reload()
+    } else if (id === "downloadError" || btnIndex === 1) {
+        // bug reporting will be up next update
     }
 })

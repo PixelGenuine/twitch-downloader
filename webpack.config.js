@@ -18,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|svg|html)$/,
+                test: /\.(png|svg|html|css)$/,
                 loader: "file-loader?name=[name].[ext]",
                 exclude: /node_modules/
             }

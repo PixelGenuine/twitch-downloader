@@ -1,36 +1,23 @@
-// Twitch Downloader logo
-import logo16 from "./assets/img/logo-16.png"
-import logo64 from "./assets/img/logo-64.png"
-import logo128 from "./assets/img/logo-128.png"
+import bootstrap from "./bootstrap"
 
-import index from './pages/index.html'
-
-// libs and helper functions
 import $ from "jquery"
 const clips = require("./utils/clips")
 
+const DOWNLOAD_ICON = `<svg id="icon_download" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><g><rect x="-1" y="-1" width="30" height="30" id="canvas_background" fill="none"/></g><g><g stroke="null" id="svg_1"><g stroke="null" id="file-download"><path stroke="null" d="m23.034942,12.130379l-4.591393,0l0,-6.887097l-6.887097,0l0,6.887097l-4.591393,0l8.034938,8.034938l8.034945,-8.034938zm-16.069883,10.330642l0,2.295697l16.069883,0l0,-2.295697l-16.069883,0z" id="svg_2"/></g></g><g id="svg_3"/><g id="svg_4"/><g id="svg_5"/><g id="svg_6"/><g id="svg_7"/><g id="svg_8"/><g id="svg_9"/><g id="svg_10"/><g id="svg_11"/><g id="svg_12"/><g id="svg_13"/><g id="svg_14"/><g id="svg_15"/><g id="svg_16"/><g id="svg_17"/></g></svg>`
+
 // runs after the page fully loads
-window.onload = function () {
+window.onload = function() {
     if (window.location.href != "https://clips.twitch.tv/create") {
-        const downloadIcon = `<svg id="icon_download" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><g><rect x="-1" y="-1" width="30" height="30" id="canvas_background" fill="none"/></g><g><g stroke="null" id="svg_1"><g stroke="null" id="file-download"><path stroke="null" d="m23.034942,12.130379l-4.591393,0l0,-6.887097l-6.887097,0l0,6.887097l-4.591393,0l8.034938,8.034938l8.034945,-8.034938zm-16.069883,10.330642l0,2.295697l16.069883,0l0,-2.295697l-16.069883,0z" id="svg_2"/></g></g><g id="svg_3"/><g id="svg_4"/><g id="svg_5"/><g id="svg_6"/><g id="svg_7"/><g id="svg_8"/><g id="svg_9"/><g id="svg_10"/><g id="svg_11"/><g id="svg_12"/><g id="svg_13"/><g id="svg_14"/><g id="svg_15"/><g id="svg_16"/><g id="svg_17"/></g></svg>`
-
-        let player = document.getElementsByClassName("player-video"),
-            clipURL = player[0].firstChild.getAttribute("src")
-
         // inject the download button
-        $('<button class="player-button pl-mg-r-1 pl-button__fullscreen--tooltip-left" id="dl-btn" tabindex="-2"><span><span class="player-tip" data-tip="Download Clip"></span><span class="">' + downloadIcon + '</span></span></button>').appendTo('.player-buttons-right')
-
+        $('<button class="player-button pl-mg-r-1 pl-button__fullscreen--tooltip-left" id="dl-btn" tabindex="-2"><span><span class="player-tip" data-tip="Download Clip"></span><span class="">' + DOWNLOAD_ICON + '</span></span></button>').appendTo('.player-buttons-right')
+        
+        // fuck jquery
         let dlButton = document.getElementById("dl-btn")
 
         // listen for when the download button is clicked
-        // we're using the bare bones js because jquery is trash
         dlButton.addEventListener("click", function () {
-            // get the unique clip id
-            let slug = clips.getSlug({"origin": window.location.origin, "pathname": window.location.pathname})
-
-            // send message to the downloader with the necessary download info
-            browser.runtime.sendMessage({"url": clipURL, "slug": slug})
+            // starts the download process
+            clips.download()
         })
     }
 }
-

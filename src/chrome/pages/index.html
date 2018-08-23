@@ -1,28 +1,103 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        .wrapper {
-            width: 500px;
-            height: auto;
-            padding: 5px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">        
+        <link rel="stylesheet" href="./popup.css">
 
-        .message {
-            position: relative;
-            width: auto;
-            padding: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="message">
-            <p>Do you find my work useful? <b>Consider donating <a href="https://paypal.me/hassanaljadooa">here</a> so I can keep making awesome stuff.</b> I spent a significant amount of my time developing this project, donation will allow me to keep going.</p>
-        </div>
-    </div>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 style="font-size: 24px; font-weight: bold; padding: 5px;">FAQ:</h1>
+            <div class="message">
+                <div class="accordion" id="info">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#how-to-use" aria-expanded="true">
+                                How do I use Twitch Downloader?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="how-to-use" class="collapse" data-parent="#info">
+                            <div class="card-body">
+                                <h1>Instructions:</h1>
+                                <ol>
+                                    <li>Navigate to your desired clip. <a href="https://clips.twitch.tv/DullSuperChinchillaRitzMitz" target="_blank">Example.</a></li>
+                                    <li>Once completed, look for a download icon at the bottom right of the video player controls.</li>
+                                    <li>Click it to download.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!--How to use Twitch Downloader-->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#quality-change" aria-expanded="true">
+                                How do I download clips at a certain quality?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="quality-change" class="collapse" data-parent="#info">
+                            <div class="card-body">
+                                <h1>Instructions:</h1>
+                                <ol>
+                                    <li>Look for the gear icon at the bottom right of the video player.</li>
+                                    <li>Click it, and click on "Quality."</li>
+                                    <li>After that, simply select your desired quality and download away.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!--How to change quality-->
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#infographic-collapse" aria-expanded="true">
+                                Developer Information
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="infographic-collapse" class="collapse" data-parent="#info">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <div class="profile">
+                                            <div class="profile-img">
+                                                <img style="border-radius: 50%;" src="https://i.imgur.com/d4uPXq1.jpg" alt="Hassan">
+                                            </div>
+                                            <div class="h-seperator"></div>
+                                            <div class="profile-links">
+                                                <ul>
+                                                    <li><a href="https://twitter.com/haljadooa" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="https://instagram.com/haljadooa" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                    <li><a href="https://reddit.com/u/haljadooa" target="_blank"><i class="fab fa-reddit"></i></a></li>
+                                                    <li><a href="https://github.com/haljadooa" target="_blank"><i class="fab fa-github"></i></a></li>
+                                                    <li><a href="https://paypal.me/hassanaljadooa" target="_blank"><i class="fab fa-paypal"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="v-seperator"></div>
+                                    <div style="padding: 5px;">
+                                        <p>Hi, I am <a href="https://instagram.com/haljadooa" target="_blank">Hassan</a>, I made Twitch Downloader with the ambition of refining my programming skills. At first I didn't have the desire to release TD to the public, but seeing as it was getting increasingly difficult to download clips on Twitch, I packaged it up and released it for free on Chrome and Firefox.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Dev info-->
+                </div> <!--Accordion-->
+            </div> <!--Message div-->
+        </div><!--Wrapper-->
+    </body>
 </html>
+
