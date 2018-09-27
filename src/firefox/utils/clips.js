@@ -61,7 +61,7 @@ module.exports = {
             // tries to get the url again after 50 ms
             setTimeout(getURL(), 50)
         } else {
-            // tell chrome to start the download
+            // tell firefox to start the download
             browser.runtime.sendMessage({"url": url, "slug": slug})
         }
     }
