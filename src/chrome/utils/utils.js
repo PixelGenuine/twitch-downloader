@@ -14,7 +14,7 @@ module.exports = {
            "title": data.title,
            "message": data.message,
            "contextMessage": data.context,
-           "buttons": [{"title": "Reload", "iconUrl": "./reload.png"}, {"title": "Report bug", "iconUrl": "./bug.png"}]
+           "buttons": [{"title": "Reload", "iconUrl": "./reload.png"}]
        })
     }
 }

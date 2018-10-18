@@ -15,7 +15,8 @@ chrome.runtime.onMessage.addListener(function(args) {
             "url": args.url,
             "filename": args.slug + ".mp4",
             "saveAs": false
-        });
+        })
+        
     } catch (e) {
         // notify the user when clip download fails
         utils.notify({
@@ -32,12 +33,11 @@ chrome.runtime.onMessage.addListener(function(args) {
 chrome.notifications.onButtonClicked.addListener(function (id, btnIndex) {
     // check which button was clicked
     if (id === "downloadError" || btnIndex === 0) {
+        
         /**
          * No need to specifiy a tab id
          * because it will default to the current active tab
          */
         chrome.tabs.reload()
-    } else if (id === "downloadError" || btnIndex === 1) {
-        // bug reporting will be up next update
     }
 })

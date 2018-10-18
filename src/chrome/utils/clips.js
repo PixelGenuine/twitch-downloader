@@ -11,7 +11,7 @@ function getSlug() {
     // error handling
     try {
         // check which version of the twitch viewer is being used
-        if (window.location.origin != "https://clips.twitch.tv") {
+        if (window.location.hostname != "clips.twitch.tv") {
             slug = window.location.pathname.split("/")[3]
         } else {
             slug = window.location.pathname.split("/")[1]
@@ -39,6 +39,7 @@ function getURL() {
     // select the video player
     let player = document.getElementsByClassName("player-video")
 
+    // get the clip url stored in the DOM object
     url = player[0].firstChild.currentSrc
 
     // check if the url exists or not
