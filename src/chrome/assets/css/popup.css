@@ -19,19 +19,6 @@ button:active, a:active {
     color: #6441A5!important;
 }
 
-/*Vertical seperator*/
-.v-seperator {
-    margin: 5px;
-    height: auto;
-    border: 1px solid rgba(0,0,0,0.05)
-}
-
-.h-seperator {
-    margin: 5px;
-    width: auto;
-    border: 1px solid rgba(0,0,0,0.05)
-}
-
 .wrapper {
     width: 600px;
     height: auto;
@@ -58,35 +45,9 @@ button:active, a:active {
     font-weight: bold;
 }
 
-.profile {
-    padding: 5px;
-}
-
-.profile .profile-img {
-    border: 1px solid #6441a4;
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-}
-
-.profile .profile-img img {
-    width: 128px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.profile .profile-links ul {
+.bottom-notice {
+    font-weight: bold;
     text-align: center;
-    margin:0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.profile .profile-links ul li {
-    display: inline;
-    padding-right: 5px;
-}
-
-.card-body {
-    border-bottom: 1px solid #00000020!important;
+    padding-top: 6px;
+    margin-bottom: 0px;
 }
