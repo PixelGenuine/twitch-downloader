@@ -11,7 +11,7 @@ function getSlug() {
     // error handling
     try {
         // check which version of the twitch viewer is being used
-        if (window.location.origin != "https://clips.twitch.tv") {
+        if (window.location.hostname != "clips.twitch.tv") {
             slug = window.location.pathname.split("/")[3]
         } else {
             slug = window.location.pathname.split("/")[1]
@@ -19,14 +19,14 @@ function getSlug() {
     } catch(e) {
         /**
          * if an error occurres
-         * the slug is set to "clip" to keep the download process going
+         * the slug is set to "untitled_clip" to keep the download process going
          */
-        slug = "clip"
+        slug = "untitled_clip"
     }
         
     // just in case slug retrieval fails and no error is thrown
     if (slug == undefined || slug == null || slug == "") {
-        slug = "clip"
+        slug = "untitled_clip"
     }
 }
 
@@ -39,6 +39,7 @@ function getURL() {
     // select the video player
     let player = document.getElementsByClassName("player-video")
 
+    // get the clip url stored in the DOM object
     url = player[0].firstChild.currentSrc
 
     // check if the url exists or not
@@ -61,8 +62,8 @@ module.exports = {
             // tries to get the url again after 50 ms
             setTimeout(getURL(), 50)
         } else {
-            // tell firefox to start the download
-            browser.runtime.sendMessage({"url": url, "slug": slug})
+            // tell chrome to start the download
+            chrome.runtime.sendMessage({"url": url, "slug": slug})
         }
     }
 }

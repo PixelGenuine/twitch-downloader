@@ -1,4 +1,4 @@
-const utils = require("./utils/utils")
+const utils = require("../../utils/utils")
 
 // will execute when the extension is first installed
 chrome.runtime.onInstalled.addListener(function() {

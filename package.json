@@ -22,19 +22,26 @@
   },
   "homepage": "https://github.com/haljadooa/twitch-downloader#readme",
   "dependencies": {
-    "history-events": "^1.0.4",
-    "jquery": "^3.3.1",
-    "melanke-watchjs": "^1.5.0"
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "path": "^0.12.7",
+    "@babel/core": "^7.2.2",
+    "babelify": "^10.0.0",
     "bable-loader": "0.0.1-security",
+    "browserify": "^16.2.3",
     "copy-webpack-plugin": "^4.5.2",
+    "envify": "^4.1.0",
     "file-loader": "^1.1.11",
+    "fs": "0.0.1-security",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "require-globify": "^1.4.1",
+    "transform-runtime": "0.0.0",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.1.2",
     "write-file-webpack-plugin": "^4.3.2"
   }
 }

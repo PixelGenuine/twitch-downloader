@@ -2,13 +2,12 @@ const webpack = require("webpack")
 const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 
-// build either "firefox" or the "chrome" version
 let version = "chrome"
 
 module.exports = {
     entry: {
-        background: path.join(__dirname, "src", version, "background.js"),
-        main: path.join(__dirname, "src", version, "main.js")
+        background: path.join(__dirname, "src", "config", version, "background.js"),
+        index: path.join(__dirname, "src", "index.js")
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -27,7 +26,7 @@ module.exports = {
 
     plugins: [
         new CopyWebpackPlugin([{
-            from: `src/${version}/manifest.json`,
+            from: `src/config/${version}/manifest.json`,
             transform: function (content, path) {
                 // generates the manifest file using the package.json informations
                 return Buffer.from(JSON.stringify({
