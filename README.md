@@ -6,7 +6,7 @@ The source code will remain fully available to clone and download, although be w
 
 The copyright license has been changed from GNU General Public License v3.0 to an MIT license, this gives even more freedom to anyone who wishes to update or redistribute this project under a different name (I have actually received a lot of negative feedback over the name because of its vagueness, and rightfully so honestly... It should've been Twitch Clip Downloader.) 
 
-And finally, this project was fun to make and briefly update I learned a lot from it. It also helped a lot of twitch users easily download clips while it was alive. If you're looking for a better alternative, I recommend [Twitch Clip Downloader](https://chrome.google.com/webstore/detail/twitch-clip-downloader/klkjnhemebjdikndlpknonjedeefkedk)
+And finally, this project was fun to make, and  I learned a lot from it. It helped a lot of Twitch users easily download clips while it was alive. I also want to thank everyone who took the time to use, I'm sorry it had to come to an end :( If you're looking for a better alternative, I recommend [Twitch Clip Downloader](https://chrome.google.com/webstore/detail/twitch-clip-downloader/klkjnhemebjdikndlpknonjedeefkedk) I briefly tested it and it seems to work as intended.
 
 # ![Twitch Downloader Logo](https://i.imgur.com/iN0W0g4.png)Twitch Downloader
 
